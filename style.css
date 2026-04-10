@@ -75,13 +75,17 @@ img { max-width: 100%; height: auto; display: block; }
 /* === HEADER === */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: transparent;
+  background: rgba(248,245,240,0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(221,216,208,0.5);
   transition: background 0.3s, box-shadow 0.3s, border 0.3s;
 }
 .has-eco-banner .site-header { top: 36px; }
 .site-header.scrolled {
   background: rgba(248,245,240,0.96);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--shadow);
   border-bottom: 1px solid var(--color-border);
 }
@@ -104,10 +108,10 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .main-nav ul { display: flex; gap: var(--space-xl); list-style: none; }
 .main-nav a {
-  font-size: var(--font-size-small); font-weight: 600; color: var(--color-text-secondary);
+  font-size: var(--font-size-small); font-weight: 600; color: var(--color-text);
   padding: var(--space-sm) 0; position: relative;
 }
-.site-header.scrolled .main-nav a { color: var(--color-text-secondary); }
+.site-header.scrolled .main-nav a { color: var(--color-text); }
 .main-nav a.active, .main-nav a:hover { color: var(--color-primary); }
 .main-nav a::after {
   content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
